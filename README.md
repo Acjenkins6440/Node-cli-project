@@ -21,7 +21,7 @@ Cons: Requires the most storage, not very scalable. If transactions don't clear 
 Pros: Much more scalable, since it's only holding updates and not the entire store.  Doesn't require all transactions to be updated in the case that transactions should not clear on commit
 Cons: If key/values are DELETED, Object.assign would not account for this. (Possible fix: in a transaction, store deleted keys separately, then delete after COMMIT) 
 
-###Improvements
+### Improvements
 Use a Store and Error classes instead of series of functions in a single file.
 
 - Doesn't seem necessary for scope of project
